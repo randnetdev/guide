@@ -1,0 +1,46 @@
+<html>
+<head>
+Hi, and welcome to section 6.
+<br>
+Firstly, you're going to want to do "apt install nano", followed by "cat /etc/resolv.conf" and note down the IP after the nameserver, somewhere.
+It should look something like in the pic, a little, but with IP with the pattern 172.16.10.x (read below)
+<img src="/images/raspberrypi-staticip-dnsip.png">
+<br>
+At this point I am assuming you've set your DHCP range to 172.16.10.1-172.16.10.255 in your router, if not:
+<br>
+Please follow this: <br>
+<a href="https://www.google.com/search?client=firefox-b-1-e&q=change+your+dhcp+range+in+your+router">
+https://www.google.com/search?client=firefox-b-1-e&q=change+your+dhcp+range+in+your+router</a> and find your router's guide
+on how to change it. A good router for doing so is the Cisco RV042G, which is what I use, and can be bought 
+<a href="https://www.ebay.com/itm/255858178613"here</a>.
+<br>
+Next, you're going to want to do "sudo nano /etc/dhcpcd.conf" and if you have ethernet, put the first line as
+"interface <strong>eth0</strong>" but if you did the WiFi guide, do "interface <strong>wlan0</strong>"
+<br>
+For the second line, do "static ip_address=<strong>172.16.10.30</strong>/24"
+<br>
+For the third line, you'll need your computer for this. Do Windows Key + R and type in cmd, and hit ok. It'll look a little something like this:
+<br>
+<img src="/images/runmii.png">
+<br>
+Next, in your command prompt, type in "ipconfig". You'll see something like default gateway, as shown by the red line in my example:
+<img src="/images/ip.png">
+<br>
+Sometimes, checking your network adapter name, but not in my example, can help, espically if you have Fortinet. 
+I will show what network adapters can look like
+in your device manager, ut we will skip that for this tutorial, as it wasn't in my case.
+<br>
+<img src="/images/check.png">
+<br>
+Then, for the third line, put "static routers=<strong>ROUTER_IP</strong>" and replace ROUTER_IP with the gateway IP you found in the previous step.
+<br>
+Finally, for the fourth line, put "static domain_name_servers=<strong>DNS_IP</strong>" while replacing DNS_IP with the nameserver IP you got
+at the beginning of this guide. Obviously your DHCP ranges, and beginnings will be different, but here is what the syntax might look like:
+<img src="raspberrypi-staticip-config.png">
+<br>
+<br>
+<br>
+Your DNS server IP should now work with the N64!
+<br>
+<br>
+Click <a href="/guide/guide7.html">here</a> to go to section 7.
