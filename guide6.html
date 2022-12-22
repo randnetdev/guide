@@ -14,6 +14,7 @@ https://www.google.com/search?client=firefox-b-1-e&q=change+your+dhcp+range+in+y
 on how to change it. A good router for doing so is the Cisco RV042G, which is what I use, and can be bought 
 <a href="https://www.ebay.com/itm/255858178613">here</a>.
 <br>
+<pre>
 Next, you're going to want to do "sudo nano /etc/dhcpcd.conf" and if you have ethernet, put the first line as
 "interface <strong>eth0</strong>" but if you did the WiFi guide, do "interface <strong>wlan0</strong>"
 <br>
@@ -38,11 +39,10 @@ Finally, for the fourth line, put "static domain_name_servers=<strong>DNS_IP</st
 at the beginning of this guide. Obviously your DHCP ranges, and beginnings will be different, but here is what the syntax might look like:
 <img src="raspberrypi-staticip-config.png">
 <br>
-<br>
-<br>
 Your DNS server IP should now work with the N64! Reboot and move on to the next section, well done! :)
 <br>
 <br>
 Click <a href="/guide/guide7.html">here</a> to go to section 7.
+</pre>
 </head>
 </html>
