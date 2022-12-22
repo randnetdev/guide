@@ -10,7 +10,7 @@ and run the installer, and hit Install. You'll need to install Raspberry Pi Imag
 Raspberry Pi Imager can be found in the [Links](#links) Section.
 
 ## Installing an SSH Client (or not)
-You'll need to install an SSH Client, (Windows 10, and Windows 11 include an ssh client via cmd.exe since Windows 10 1709) in Windows 10 & Windows 11. which can be found [Here](https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.78-installer.msi)
+You'll need to install an SSH Client, (Windows 10, and Windows 11 include an ssh client via cmd.exe since Windows 10 1709) in Windows 10 & Windows 11.
 
 From there, you're set to begin. Right click on the zsd file and go to 7Zip-ZS>Extract files... and specify a location where you want your firmware to be
 extracted.
